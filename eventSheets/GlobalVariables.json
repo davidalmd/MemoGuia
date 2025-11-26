@@ -1,0 +1,156 @@
+{
+	"name": "GlobalVariables",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "gNumberRows",
+			"type": "number",
+			"initialValue": "2",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 622902677563683
+		},
+		{
+			"eventType": "variable",
+			"name": "gNumberColumns",
+			"type": "number",
+			"initialValue": "6",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 133149501690624
+		},
+		{
+			"eventType": "variable",
+			"name": "gNumberCards",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 428279904374417
+		},
+		{
+			"eventType": "variable",
+			"name": "gCardHeight",
+			"type": "number",
+			"initialValue": "206",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 496511809053283
+		},
+		{
+			"eventType": "variable",
+			"name": "gCardWidth",
+			"type": "number",
+			"initialValue": "161",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 338999707600612
+		},
+		{
+			"eventType": "variable",
+			"name": "gMarginLeft",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 683530788209243
+		},
+		{
+			"eventType": "variable",
+			"name": "gMarginTop",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 442307516927024
+		},
+		{
+			"eventType": "variable",
+			"name": "gSpaceBetweenCards",
+			"type": "number",
+			"initialValue": "90",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 954679194986702
+		},
+		{
+			"eventType": "variable",
+			"name": "gRepeatCards",
+			"type": "number",
+			"initialValue": "50",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 120263866779328
+		},
+		{
+			"eventType": "variable",
+			"name": "gFirstCardFrame",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 633553785929815
+		},
+		{
+			"eventType": "variable",
+			"name": "gSecondCardFrame",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 586582057687940
+		},
+		{
+			"eventType": "variable",
+			"name": "gCardsCountPicked",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 198003988460702
+		},
+		{
+			"eventType": "variable",
+			"name": "gWaitSeconds",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 277460586270659
+		},
+		{
+			"eventType": "variable",
+			"name": "gMatches",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 952142821835582
+		},
+		{
+			"eventType": "variable",
+			"name": "gTime",
+			"type": "number",
+			"initialValue": "181",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 558817163906778
+		}
+	],
+	"sid": 981259855991635
+}

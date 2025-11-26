@@ -1,0 +1,828 @@
+{
+	"name": "GamePlay",
+	"events": [
+		{
+			"eventType": "comment",
+			"text": "Inicializa as variáveis"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 347505264725212
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 195680049163815,
+					"parameters": {
+						"variable": "gNumberCards",
+						"value": "gNumberRows*gNumberColumns"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 120597884757981,
+					"disabled": true,
+					"parameters": {
+						"variable": "gCardHeight",
+						"value": "int((OriginalViewportHeight - ((gNumberRows + 1) * gSpaceBetweenCards)) / gNumberRows)"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 355069627220203,
+					"disabled": true,
+					"parameters": {
+						"variable": "gCardWidth",
+						"value": "int(gCardHeight * (Card.Width / Card.Height))"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 141373872996459,
+					"parameters": {
+						"variable": "gMarginLeft",
+						"value": "int((OriginalViewportWidth - (gCardWidth + gSpaceBetweenCards) * gNumberColumns) / 2)"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 669099425371686,
+					"parameters": {
+						"variable": "gMarginTop",
+						"value": "int((OriginalViewportHeight - (gCardHeight + gSpaceBetweenCards) * gNumberRows) / 2)"
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "Deck",
+					"sid": 669594472142486,
+					"parameters": {
+						"width": "gNumberCards",
+						"height": "1",
+						"depth": "1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 316040747776981,
+					"parameters": {
+						"variable": "gCardsCountPicked",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 417177761952293,
+					"parameters": {
+						"variable": "gMatches",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 731050130239097,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "Popula o nosso deck de cartas (array)"
+				},
+				{
+					"eventType": "variable",
+					"name": "currentCard",
+					"type": "number",
+					"initialValue": "-1",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 689114022705989
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "repeat",
+							"objectClass": "System",
+							"sid": 262778277376751,
+							"parameters": {
+								"count": "gNumberCards"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 902399529378673,
+							"parameters": {
+								"variable": "currentCard",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-at-x",
+							"objectClass": "Deck",
+							"sid": 221645934424961,
+							"parameters": {
+								"x": "currentCard",
+								"value": "currentCard"
+							}
+						}
+					],
+					"sid": 752263433073537
+				},
+				{
+					"eventType": "comment",
+					"text": "Embaralha as cartas"
+				},
+				{
+					"eventType": "variable",
+					"name": "pCard1",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 479337800927819
+				},
+				{
+					"eventType": "variable",
+					"name": "pCard2",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 615171479556748
+				},
+				{
+					"eventType": "variable",
+					"name": "vCard1",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 205188061419888
+				},
+				{
+					"eventType": "variable",
+					"name": "vCard2",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 687925829583961
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "repeat",
+							"objectClass": "System",
+							"sid": 823468893575817,
+							"parameters": {
+								"count": "gRepeatCards"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 247055769282188,
+							"parameters": {
+								"variable": "pCard1",
+								"value": "random(0, gNumberCards)"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 157177411065651,
+							"parameters": {
+								"variable": "pCard2",
+								"value": "random(0, gNumberCards)"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 567687380064684,
+							"parameters": {
+								"variable": "vCard1",
+								"value": "Deck.At(pCard1)"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 980417620331328,
+							"parameters": {
+								"variable": "vCard2",
+								"value": "Deck.At(pCard2)"
+							}
+						},
+						{
+							"id": "set-at-x",
+							"objectClass": "Deck",
+							"sid": 602606481436001,
+							"parameters": {
+								"x": "pCard1",
+								"value": "vCard2"
+							}
+						},
+						{
+							"id": "set-at-x",
+							"objectClass": "Deck",
+							"sid": 828543309551198,
+							"parameters": {
+								"x": "pCard2",
+								"value": "vCard1"
+							}
+						}
+					],
+					"sid": 501821082755647
+				},
+				{
+					"eventType": "comment",
+					"text": "Cria o layout do jogo"
+				},
+				{
+					"eventType": "variable",
+					"name": "CurrentTableCard",
+					"type": "number",
+					"initialValue": "-1",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 763755660962249
+				},
+				{
+					"eventType": "variable",
+					"name": "CurrentColumn",
+					"type": "number",
+					"initialValue": "-1",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 221996093038406
+				},
+				{
+					"eventType": "variable",
+					"name": "CurrentRow",
+					"type": "number",
+					"initialValue": "-1",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 474636183322100
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "repeat",
+							"objectClass": "System",
+							"sid": 124585708123038,
+							"parameters": {
+								"count": "gNumberCards"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 551905449725606,
+							"parameters": {
+								"variable": "CurrentTableCard",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 312249977104792,
+							"parameters": {
+								"variable": "CurrentColumn",
+								"value": "CurrentTableCard%gNumberColumns"
+							}
+						}
+					],
+					"sid": 423695591334101,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 897259870095328,
+									"parameters": {
+										"first-value": "CurrentColumn",
+										"comparison": 0,
+										"second-value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 268354845692413,
+									"parameters": {
+										"variable": "CurrentRow",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 102253141519943
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 932729504248256,
+									"parameters": {
+										"object-to-create": "Card",
+										"layer": "0",
+										"x": "gMarginLeft + (CurrentColumn * (gCardWidth + gSpaceBetweenCards))",
+										"y": "gMarginTop + (CurrentRow * (gCardHeight + gSpaceBetweenCards))",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-size",
+									"objectClass": "Card",
+									"sid": 998549390421421,
+									"parameters": {
+										"width": "gCardWidth",
+										"height": "gCardHeight"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Card",
+									"sid": 211790183287892,
+									"parameters": {
+										"instance-variable": "CardFaceFrame",
+										"value": "Deck.At(CurrentTableCard)"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Card",
+									"sid": 393322648324860,
+									"parameters": {
+										"instance-variable": "FaceUp",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 205319538972635
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "Funcionalidade de clicar e comparar cartas"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 961922023029877,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Card"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Card",
+					"sid": 287588346199921,
+					"parameters": {
+						"instance-variable": "FaceUp"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [],
+			"sid": 689463075831186,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 548781739064293,
+							"parameters": {
+								"variable": "gCardsCountPicked",
+								"comparison": 2,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Card",
+							"sid": 563080660793786,
+							"parameters": {
+								"animation": "\"CardFace\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Card",
+							"sid": 753389534130449,
+							"parameters": {
+								"frame-number": "Card.CardFaceFrame"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Card",
+							"sid": 116433735652905,
+							"parameters": {
+								"instance-variable": "FaceUp",
+								"value": "true"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 164731365229990,
+							"parameters": {
+								"variable": "gCardsCountPicked",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 379810524521116
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 663966374473055,
+							"parameters": {
+								"variable": "gCardsCountPicked",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 187261296780954,
+							"parameters": {
+								"variable": "gFirstCardFrame",
+								"value": "Card.CardFaceFrame"
+							}
+						}
+					],
+					"sid": 634376343593899
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 356563063121609,
+							"parameters": {
+								"variable": "gCardsCountPicked",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 808620863018562,
+							"parameters": {
+								"variable": "gSecondCardFrame",
+								"value": "Card.CardFaceFrame"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 167453119964537,
+							"parameters": {
+								"seconds": "gWaitSeconds",
+								"use-timescale": true
+							}
+						}
+					],
+					"sid": 813762390349067,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 894100526118765,
+									"parameters": {
+										"first-value": "gFirstCardFrame - (gFirstCardFrame % 2)",
+										"comparison": 0,
+										"second-value": "gSecondCardFrame - (gSecondCardFrame % 2)"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 955996180386022,
+									"parameters": {
+										"variable": "gFirstCardFrame",
+										"comparison": 1,
+										"value": "gSecondCardFrame"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 542906436968299,
+									"parameters": {
+										"variable": "gMatches",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 894326909378716,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-all",
+											"objectClass": "System",
+											"sid": 986986932712758,
+											"parameters": {
+												"object": "Card"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 837200023061224,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "Card",
+													"sid": 679138703546551,
+													"parameters": {
+														"instance-variable": "FaceUp"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "destroy",
+													"objectClass": "Card",
+													"sid": 299982761487955
+												}
+											],
+											"sid": 976009733744834
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 200493704657585
+								}
+							],
+							"actions": [],
+							"sid": 793063654268220,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-all",
+											"objectClass": "System",
+											"sid": 552567593272512,
+											"parameters": {
+												"object": "Card"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 344269700915124,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "Card",
+													"sid": 199352482544501,
+													"parameters": {
+														"instance-variable": "FaceUp"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "Card",
+													"sid": 315756892374144,
+													"parameters": {
+														"instance-variable": "FaceUp",
+														"value": "false"
+													}
+												},
+												{
+													"id": "set-animation",
+													"objectClass": "Card",
+													"sid": 770995408814901,
+													"parameters": {
+														"animation": "\"CardBack\"",
+														"from": "beginning"
+													}
+												}
+											],
+											"sid": 600715198863185
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 571302471726154,
+									"parameters": {
+										"variable": "gCardsCountPicked",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 822250980769321,
+									"parameters": {
+										"variable": "gFirstCardFrame",
+										"value": "-1"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 727469924834468,
+									"parameters": {
+										"variable": "gSecondCardFrame",
+										"value": "-1"
+									}
+								}
+							],
+							"sid": 453691465178630
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "Funcionalidade de timer"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 599967464411317
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 379771235453220,
+					"parameters": {
+						"variable": "gTime",
+						"comparison": 4,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 980026722805689,
+					"parameters": {
+						"variable": "gTime",
+						"value": "dt"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "TextTime",
+					"sid": 555729261844426,
+					"parameters": {
+						"text": "floor(gTime / 60) & \":\" & zeropad(floor(gTime % 60), 2)"
+					}
+				}
+			],
+			"sid": 738992520642591,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "Verificar fim do jogo"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 984899319840851,
+							"parameters": {
+								"first-value": "gMatches",
+								"comparison": 0,
+								"second-value": "gNumberCards / 2"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 153031487969341,
+							"parameters": {
+								"variable": "gTime",
+								"comparison": 3,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 305519118486568,
+							"parameters": {
+								"seconds": "1.0",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 547739271944508,
+							"parameters": {
+								"layout": "Home"
+							}
+						}
+					],
+					"sid": 894151611738965,
+					"isOrBlock": true
+				}
+			]
+		}
+	],
+	"sid": 981606670686406
+}

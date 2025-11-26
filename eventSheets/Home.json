@@ -1,0 +1,41 @@
+{
+	"name": "Home",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 772451681330800,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "BotaoJogar"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 544900674923980,
+					"parameters": {
+						"variable": "gTime",
+						"value": "181"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 438226245019054,
+					"parameters": {
+						"layout": "GamePlay"
+					}
+				}
+			],
+			"sid": 953798255885031
+		}
+	],
+	"sid": 555050347213436
+}
