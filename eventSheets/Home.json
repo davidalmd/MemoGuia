@@ -17,20 +17,11 @@
 			],
 			"actions": [
 				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 544900674923980,
-					"parameters": {
-						"variable": "gTime",
-						"value": "181"
-					}
-				},
-				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 438226245019054,
+					"sid": 399640083568231,
 					"parameters": {
-						"layout": "GamePlay"
+						"layout": "Niveis"
 					}
 				}
 			],

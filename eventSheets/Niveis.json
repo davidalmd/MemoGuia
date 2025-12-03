@@ -1,0 +1,41 @@
+{
+	"name": "Niveis",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 394082784032410,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "BotaoPracaConceicao"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 611099066699474,
+					"parameters": {
+						"variable": "gTime",
+						"value": "181"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 414937718471769,
+					"parameters": {
+						"layout": "GamePlayPracaConceicao"
+					}
+				}
+			],
+			"sid": 914961240140599
+		}
+	],
+	"sid": 314309259994371
+}

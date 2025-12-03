@@ -1,5 +1,5 @@
 {
-	"name": "GamePlay",
+	"name": "GamePlayPracaConceicao",
 	"layers": [
 		{
 			"name": "GUI",
@@ -226,5 +226,5 @@
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",
-	"eventSheet": "GamePlay"
+	"eventSheet": "GamePlayPracaConceicao"
 }

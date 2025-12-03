@@ -58,7 +58,10 @@
 			"TelaNiveis",
 			"TextTime",
 			"TiledBackground",
-			"BotaoJogar"
+			"BotaoJogar",
+			"PlanoDeFundoEmBlocos",
+			"PlanoDeFundoEmBlocos2",
+			"BotaoPracaConceicao"
 		],
 		"subfolders": []
 	},
@@ -71,16 +74,18 @@
 	},
 	"layouts": {
 		"items": [
-			"GamePlay",
-			"Home"
+			"GamePlayPracaConceicao",
+			"Home",
+			"Niveis"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"GamePlay",
+			"GamePlayPracaConceicao",
 			"GlobalVariables",
-			"Home"
+			"Home",
+			"Niveis"
 		],
 		"subfolders": []
 	},
