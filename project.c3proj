@@ -61,7 +61,12 @@
 			"BotaoJogar",
 			"PlanoDeFundoEmBlocos",
 			"PlanoDeFundoEmBlocos2",
-			"BotaoPracaConceicao"
+			"BotaoPracaConceicao",
+			"PlanodeFundoNiveis",
+			"BotaoVoltar",
+			"HistoriaPracaConceicao",
+			"BotaoJogarGamePlay",
+			"BotaoVoltarpHome"
 		],
 		"subfolders": []
 	},
@@ -76,7 +81,8 @@
 		"items": [
 			"GamePlayPracaConceicao",
 			"Home",
-			"Niveis"
+			"Niveis",
+			"HistoriaPracaConceicao"
 		],
 		"subfolders": []
 	},
@@ -85,7 +91,8 @@
 			"GamePlayPracaConceicao",
 			"GlobalVariables",
 			"Home",
-			"Niveis"
+			"Niveis",
+			"HistoriaPracaConceicao"
 		],
 		"subfolders": []
 	},

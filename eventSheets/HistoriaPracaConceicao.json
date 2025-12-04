@@ -1,5 +1,5 @@
 {
-	"name": "Niveis",
+	"name": "HistoriaPracaConceicao",
 	"events": [
 		{
 			"eventType": "block",
@@ -7,34 +7,25 @@
 				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
-					"sid": 394082784032410,
+					"sid": 545630753995257,
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "BotaoPracaConceicao"
+						"object-clicked": "BotaoJogarGamePlay"
 					}
 				}
 			],
 			"actions": [
 				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 611099066699474,
-					"parameters": {
-						"variable": "gTime",
-						"value": "181"
-					}
-				},
-				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 389610932646657,
+					"sid": 966080107507262,
 					"parameters": {
-						"layout": "HistoriaPracaConceicao"
+						"layout": "GamePlayPracaConceicao"
 					}
 				}
 			],
-			"sid": 914961240140599
+			"sid": 647809782945084
 		},
 		{
 			"eventType": "block",
@@ -42,11 +33,11 @@
 				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
-					"sid": 595078450324235,
+					"sid": 720832793072270,
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "BotaoVoltarpHome"
+						"object-clicked": "BotaoVoltar"
 					}
 				}
 			],
@@ -54,14 +45,14 @@
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 800368573816597,
+					"sid": 183519250371377,
 					"parameters": {
-						"layout": "Home"
+						"layout": "Niveis"
 					}
 				}
 			],
-			"sid": 637802516898195
+			"sid": 563101848649683
 		}
 	],
-	"sid": 314309259994371
+	"sid": 469925161746858
 }

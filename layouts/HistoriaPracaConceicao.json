@@ -1,5 +1,5 @@
 {
-	"name": "Niveis",
+	"name": "HistoriaPracaConceicao",
 	"layers": [
 		{
 			"name": "Camada 0",
@@ -7,7 +7,7 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "PlanodeFundoNiveis",
+					"type": "HistoriaPracaConceicao",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -15,22 +15,22 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 8,
-					"sid": 952365970994295,
+					"uid": 12,
+					"sid": 201197020091682,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 952365970994295,
+						"sid": 201197020091682,
 						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 961,
-						"y": 539,
-						"width": 1941,
-						"height": 1092,
+						"x": 960,
+						"y": 538,
+						"width": 1920,
+						"height": 1080,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -44,7 +44,7 @@
 					}
 				},
 				{
-					"type": "BotaoPracaConceicao",
+					"type": "BotaoJogarGamePlay",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -52,22 +52,22 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 11,
-					"sid": 482140898173015,
+					"uid": 13,
+					"sid": 239170268303388,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 482140898173015,
+						"sid": 239170268303388,
 						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 153,
-						"y": 453,
-						"width": 154,
-						"height": 161,
+						"x": 1413.5,
+						"y": 899.5,
+						"width": 290,
+						"height": 87,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -81,7 +81,7 @@
 					}
 				},
 				{
-					"type": "BotaoVoltarpHome",
+					"type": "BotaoVoltar",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -89,22 +89,22 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 15,
-					"sid": 678866783666626,
+					"uid": 4,
+					"sid": 972132317447238,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 678866783666626,
+						"sid": 972132317447238,
 						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 119,
-						"y": 92,
-						"width": 208,
-						"height": 117,
+						"x": 93,
+						"y": 87,
+						"width": 210,
+						"height": 116,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -118,7 +118,7 @@
 					}
 				}
 			],
-			"sid": 357733444712519,
+			"sid": 845323893968912,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -130,9 +130,9 @@
 				1
 			],
 			"backgroundColor": [
-				0.3686274509803922,
-				0.3686274509803922,
-				0.3686274509803922,
+				1,
+				1,
+				1,
 				1
 			],
 			"isTransparent": false,
@@ -152,7 +152,7 @@
 		"items": [],
 		"subfolders": []
 	},
-	"sid": 680332517081365,
+	"sid": 267359385203363,
 	"nonworld-instances": [],
 	"effectTypes": [],
 	"width": 1920,
@@ -161,5 +161,5 @@
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",
-	"eventSheet": "Niveis"
+	"eventSheet": "HistoriaPracaConceicao"
 }

@@ -822,6 +822,32 @@
 					"isOrBlock": true
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 690143148338458,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "BotaoVoltar"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 595836868835225,
+					"parameters": {
+						"layout": "Niveis"
+					}
+				}
+			],
+			"sid": 684947540241352
 		}
 	],
 	"sid": 981606670686406
