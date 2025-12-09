@@ -829,11 +829,11 @@
 				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
-					"sid": 690143148338458,
+					"sid": 769676157742982,
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "BotaoVoltar"
+						"object-clicked": "BotaoVoltarHomeInv"
 					}
 				}
 			],

@@ -66,7 +66,10 @@
 			"BotaoVoltar",
 			"HistoriaPracaConceicao",
 			"BotaoJogarGamePlay",
-			"BotaoVoltarpHome"
+			"BotaoVoltarpHome",
+			"Sprite",
+			"BotaoVoltarHomeInv",
+			"BotaoVoltarNiveis"
 		],
 		"subfolders": []
 	},

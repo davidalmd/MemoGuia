@@ -33,11 +33,11 @@
 				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
-					"sid": 720832793072270,
+					"sid": 855551115553149,
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "BotaoVoltar"
+						"object-clicked": "BotaoVoltarNiveis"
 					}
 				}
 			],

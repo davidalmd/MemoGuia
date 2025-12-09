@@ -7,7 +7,7 @@
 				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
-					"sid": 394082784032410,
+					"sid": 366243996960251,
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
@@ -16,15 +16,6 @@
 				}
 			],
 			"actions": [
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 611099066699474,
-					"parameters": {
-						"variable": "gTime",
-						"value": "181"
-					}
-				},
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
@@ -42,11 +33,11 @@
 				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
-					"sid": 595078450324235,
+					"sid": 456387469961282,
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "BotaoVoltarpHome"
+						"object-clicked": "BotaoVoltarHomeInv"
 					}
 				}
 			],
