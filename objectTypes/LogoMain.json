@@ -1,7 +1,7 @@
 {
-	"name": "BotaoVoltar",
+	"name": "LogoMain",
 	"plugin-id": "Sprite",
-	"sid": 165130779005768,
+	"sid": 849613360633329,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -12,25 +12,31 @@
 			{
 				"frames": [
 					{
-						"width": 1920,
-						"height": 1080,
+						"width": 204,
+						"height": 114,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 5172724,
+						"imageSpriteId": 5722434,
 						"collisionPoly": {
 							"points": [
-								0.5036458333333333,
-								0.06574074074074074,
-								0.5333333333333333,
-								0.06574074074074074,
-								0.5328125,
-								0.9342592592592592,
-								0.5041666666666667,
-								0.9342592592592592
+								0.3088235294117647,
+								0.05263157894736842,
+								0.9264705882352942,
+								0.17543859649122806,
+								0.946078431372549,
+								0.21052631578947367,
+								0.9607843137254902,
+								0.2631578947368421,
+								0.9068627450980392,
+								0.868421052631579,
+								0.06372549019607843,
+								0.8859649122807017,
+								0.058823529411764705,
+								0.14035087719298245
 							]
 						},
 						"useCollisionPoly": true,
@@ -38,7 +44,7 @@
 						"tag": ""
 					}
 				],
-				"sid": 234790375230162,
+				"sid": 949803864114317,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

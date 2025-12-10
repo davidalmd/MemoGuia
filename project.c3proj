@@ -9,7 +9,7 @@
 		{
 			"type": "plugin",
 			"id": "Arr",
-			"name": "Matriz",
+			"name": "Array",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -17,13 +17,6 @@
 			"type": "plugin",
 			"id": "Mouse",
 			"name": "Mouse",
-			"author": "Scirra",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
-			"id": "SVGPicture",
-			"name": "Imagem SVG",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -37,14 +30,14 @@
 		{
 			"type": "plugin",
 			"id": "Text",
-			"name": "Texto",
+			"name": "Text",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "TiledBg",
-			"name": "Plano de Fundo em Blocos",
+			"name": "Tiled Background",
 			"author": "Scirra",
 			"bundled": false
 		}
@@ -55,7 +48,6 @@
 			"Card",
 			"Mouse",
 			"Deck",
-			"TelaNiveis",
 			"TextTime",
 			"TiledBackground",
 			"BotaoJogar",
@@ -69,7 +61,12 @@
 			"BotaoVoltarpHome",
 			"Sprite",
 			"BotaoVoltarHomeInv",
-			"BotaoVoltarNiveis"
+			"BotaoVoltarNiveis",
+			"backgroundGame",
+			"LogoMain",
+			"BotaoHelper",
+			"matchesTest",
+			"CountCardsTest"
 		],
 		"subfolders": []
 	},
@@ -182,16 +179,7 @@
 			"subfolders": []
 		},
 		"general": {
-			"items": [
-				{
-					"name": "TelaNiveis.svg",
-					"type": "image/svg+xml",
-					"sid": 137689983421579,
-					"file-info": {
-						"purpose": "none"
-					}
-				}
-			],
+			"items": [],
 			"subfolders": []
 		}
 	},

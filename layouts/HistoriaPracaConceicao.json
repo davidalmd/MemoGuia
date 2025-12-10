@@ -27,10 +27,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 960,
-						"y": 539,
-						"width": 1920,
-						"height": 1080,
+						"x": 959.7559711445235,
+						"y": 539.4071058602882,
+						"width": 1920.488057710953,
+						"height": 1081.9418945416926,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -126,43 +126,6 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 16,
-					"sid": 314841101763601,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 314841101763601,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 123,
-						"y": 178.5,
-						"width": 92,
-						"height": 89,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "BotaoVoltarNiveis",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
 					"uid": 17,
 					"sid": 134127358130156,
 					"tags": "",
@@ -175,8 +138,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 97,
-						"y": 85,
+						"x": 85,
+						"y": 86,
 						"width": 92,
 						"height": 89,
 						"originX": 0.5,

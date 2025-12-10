@@ -47,19 +47,19 @@
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 141373872996459,
+					"sid": 197737246343809,
 					"parameters": {
 						"variable": "gMarginLeft",
-						"value": "int((OriginalViewportWidth - (gCardWidth + gSpaceBetweenCards) * gNumberColumns) / 2)"
+						"value": "int(((OriginalViewportWidth * 1.045) - (gCardWidth + gSpaceBetweenCards) * gNumberColumns) / 2)"
 					}
 				},
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 669099425371686,
+					"sid": 343812518485144,
 					"parameters": {
 						"variable": "gMarginTop",
-						"value": "int((OriginalViewportHeight - (gCardHeight + gSpaceBetweenCards) * gNumberRows) / 2)"
+						"value": "int(((OriginalViewportHeight * 1.2) - (gCardHeight + gSpaceBetweenCards) * gNumberRows) / 2)"
 					}
 				},
 				{
@@ -88,6 +88,14 @@
 					"parameters": {
 						"variable": "gMatches",
 						"value": "0"
+					}
+				},
+				{
+					"id": "reset-eventvar",
+					"objectClass": "System",
+					"sid": 946649579045444,
+					"parameters": {
+						"variable": "gTime"
 					}
 				}
 			],
@@ -571,54 +579,146 @@
 									}
 								}
 							],
-							"actions": [
-								{
-									"id": "add-to-eventvar",
-									"objectClass": "System",
-									"sid": 542906436968299,
-									"parameters": {
-										"variable": "gMatches",
-										"value": "1"
-									}
-								}
-							],
+							"actions": [],
 							"sid": 894326909378716,
 							"children": [
+								{
+									"eventType": "comment",
+									"text": "Verifica se é o par impostor"
+								},
 								{
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "pick-all",
+											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 986986932712758,
+											"sid": 220049609958659,
 											"parameters": {
-												"object": "Card"
+												"variable": "gFirstCardFrame",
+												"comparison": 5,
+												"value": "10"
 											}
 										}
 									],
 									"actions": [],
-									"sid": 837200023061224,
+									"sid": 857398464862513,
 									"children": [
 										{
 											"eventType": "block",
 											"conditions": [
 												{
-													"id": "is-boolean-instance-variable-set",
-													"objectClass": "Card",
-													"sid": 679138703546551,
+													"id": "pick-all",
+													"objectClass": "System",
+													"sid": 165427226381168,
 													"parameters": {
-														"instance-variable": "FaceUp"
+														"object": "Card"
 													}
 												}
 											],
-											"actions": [
+											"actions": [],
+											"sid": 519156510347752,
+											"children": [
 												{
-													"id": "destroy",
-													"objectClass": "Card",
-													"sid": 299982761487955
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "is-boolean-instance-variable-set",
+															"objectClass": "Card",
+															"sid": 315774504503664,
+															"parameters": {
+																"instance-variable": "FaceUp"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-boolean-instvar",
+															"objectClass": "Card",
+															"sid": 151676925548064,
+															"parameters": {
+																"instance-variable": "FaceUp",
+																"value": "false"
+															}
+														},
+														{
+															"id": "set-animation",
+															"objectClass": "Card",
+															"sid": 447772590157904,
+															"parameters": {
+																"animation": "\"CardBack\"",
+																"from": "beginning"
+															}
+														}
+													],
+													"sid": 340605393224270
+												}
+											]
+										}
+									],
+									"isOrBlock": true
+								},
+								{
+									"eventType": "comment",
+									"text": "Se não é o par impostor, é um par normal"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 365038435210146
+										}
+									],
+									"actions": [],
+									"sid": 301319808429977,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "pick-all",
+													"objectClass": "System",
+													"sid": 964576140733310,
+													"parameters": {
+														"object": "Card"
+													}
 												}
 											],
-											"sid": 976009733744834
+											"actions": [],
+											"sid": 967606275096576,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "is-boolean-instance-variable-set",
+															"objectClass": "Card",
+															"sid": 951089997236652,
+															"parameters": {
+																"instance-variable": "FaceUp"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "destroy",
+															"objectClass": "Card",
+															"sid": 597625937392279
+														},
+														{
+															"id": "add-to-eventvar",
+															"objectClass": "System",
+															"sid": 542906436968299,
+															"parameters": {
+																"variable": "gMatches",
+																"value": "1"
+															}
+														}
+													],
+													"sid": 204565449644147
+												}
+											]
 										}
 									]
 								}
@@ -737,12 +837,12 @@
 				{
 					"id": "every-tick",
 					"objectClass": "System",
-					"sid": 599967464411317
+					"sid": 487316829406533
 				},
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 379771235453220,
+					"sid": 553107703001407,
 					"parameters": {
 						"variable": "gTime",
 						"comparison": 4,
@@ -754,7 +854,7 @@
 				{
 					"id": "subtract-from-eventvar",
 					"objectClass": "System",
-					"sid": 980026722805689,
+					"sid": 571962423252582,
 					"parameters": {
 						"variable": "gTime",
 						"value": "dt"
@@ -763,17 +863,33 @@
 				{
 					"id": "set-text",
 					"objectClass": "TextTime",
-					"sid": 555729261844426,
+					"sid": 582936490125424,
 					"parameters": {
 						"text": "floor(gTime / 60) & \":\" & zeropad(floor(gTime % 60), 2)"
 					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "CountCardsTest",
+					"sid": 502436983876369,
+					"parameters": {
+						"text": "Card.Count - 1"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "matchesTest",
+					"sid": 983771541718435,
+					"parameters": {
+						"text": "gMatches"
+					}
 				}
 			],
-			"sid": 738992520642591,
+			"sid": 736417837065511,
 			"children": [
 				{
 					"eventType": "comment",
-					"text": "Verificar fim do jogo"
+					"text": "Verificar fim do jogo - Vitória (Sobrando apenas o impostor)"
 				},
 				{
 					"eventType": "block",
@@ -781,17 +897,67 @@
 						{
 							"id": "compare-two-values",
 							"objectClass": "System",
-							"sid": 984899319840851,
+							"sid": 250166307441182,
 							"parameters": {
 								"first-value": "gMatches",
 								"comparison": 0,
-								"second-value": "gNumberCards / 2"
+								"second-value": "(gNumberCards / 2) - 1"
 							}
 						},
 						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 719367512519752,
+							"parameters": {
+								"first-value": "Card.Count - 1",
+								"comparison": 0,
+								"second-value": "2"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Card",
+							"sid": 159047086616718,
+							"parameters": {
+								"instance-variable": "CardFaceFrame",
+								"comparison": 2,
+								"value": "10"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 432765809423834,
+							"parameters": {
+								"seconds": "1.0",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 560347787687777,
+							"parameters": {
+								"layout": "Home"
+							}
+						}
+					],
+					"sid": 834536309797976
+				},
+				{
+					"eventType": "comment",
+					"text": "Verificar fim do jogo - Derrota (Tempo esgotado)"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 153031487969341,
+							"sid": 424287569020277,
 							"parameters": {
 								"variable": "gTime",
 								"comparison": 3,
@@ -803,7 +969,7 @@
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 305519118486568,
+							"sid": 593355804983151,
 							"parameters": {
 								"seconds": "1.0",
 								"use-timescale": true
@@ -812,13 +978,13 @@
 						{
 							"id": "go-to-layout",
 							"objectClass": "System",
-							"sid": 547739271944508,
+							"sid": 675995746423274,
 							"parameters": {
 								"layout": "Home"
 							}
 						}
 					],
-					"sid": 894151611738965,
+					"sid": 318736829778299,
 					"isOrBlock": true
 				}
 			]

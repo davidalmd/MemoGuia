@@ -145,7 +145,7 @@
 			"eventType": "variable",
 			"name": "gTime",
 			"type": "number",
-			"initialValue": "181",
+			"initialValue": "241",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
