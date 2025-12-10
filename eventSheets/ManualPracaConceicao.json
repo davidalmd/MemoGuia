@@ -1,0 +1,32 @@
+{
+	"name": "ManualPracaConceicao",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 848005221375754,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "BackButtonGamePlayPracaoConceicaoInv"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 196423724767914,
+					"parameters": {
+						"layout": "GamePlayPracaConceicao"
+					}
+				}
+			],
+			"sid": 971680786906729
+		}
+	],
+	"sid": 908541129244169
+}

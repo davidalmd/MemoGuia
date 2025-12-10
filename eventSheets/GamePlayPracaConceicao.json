@@ -1014,6 +1014,32 @@
 				}
 			],
 			"sid": 684947540241352
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 646216773838014,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "ButtonGoManualPracaConceicao"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 883783668334212,
+					"parameters": {
+						"layout": "ManualPracaConceicao"
+					}
+				}
+			],
+			"sid": 597511706598822
 		}
 	],
 	"sid": 981606670686406

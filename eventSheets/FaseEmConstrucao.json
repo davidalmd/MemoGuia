@@ -1,0 +1,32 @@
+{
+	"name": "FaseEmConstrucao",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 937595057143147,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "ButtonBackLevelsInv"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 136012580503353,
+					"parameters": {
+						"layout": "Niveis"
+					}
+				}
+			],
+			"sid": 708643595206250
+		}
+	],
+	"sid": 586082099514024
+}

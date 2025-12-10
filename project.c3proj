@@ -9,7 +9,7 @@
 		{
 			"type": "plugin",
 			"id": "Arr",
-			"name": "Array",
+			"name": "Matriz",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -30,14 +30,14 @@
 		{
 			"type": "plugin",
 			"id": "Text",
-			"name": "Text",
+			"name": "Texto",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "TiledBg",
-			"name": "Tiled Background",
+			"name": "Plano de Fundo em Blocos",
 			"author": "Scirra",
 			"bundled": false
 		}
@@ -66,7 +66,13 @@
 			"LogoMain",
 			"BotaoHelper",
 			"matchesTest",
-			"CountCardsTest"
+			"CountCardsTest",
+			"BackgroundManualPracaConceicao",
+			"BackButtonGamePlayPracaoConceicaoInv",
+			"ButtonGoManualPracaConceicao",
+			"BackgroundFaseEmConstrucao",
+			"ButtonBackLevelsInv",
+			"ButtoGoFaseConstrucao"
 		],
 		"subfolders": []
 	},
@@ -82,7 +88,9 @@
 			"GamePlayPracaConceicao",
 			"Home",
 			"Niveis",
-			"HistoriaPracaConceicao"
+			"HistoriaPracaConceicao",
+			"ManualPracaConceicao",
+			"FaseEmConstrucao"
 		],
 		"subfolders": []
 	},
@@ -92,7 +100,9 @@
 			"GlobalVariables",
 			"Home",
 			"Niveis",
-			"HistoriaPracaConceicao"
+			"HistoriaPracaConceicao",
+			"ManualPracaConceicao",
+			"FaseEmConstrucao"
 		],
 		"subfolders": []
 	},
