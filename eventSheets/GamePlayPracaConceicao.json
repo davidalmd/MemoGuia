@@ -411,6 +411,163 @@
 		},
 		{
 			"eventType": "comment",
+			"text": "Função de embaralhar as cartas para a mecânica do impostor"
+		},
+		{
+			"functionName": "EmbaralharCartas",
+			"functionDescription": "Função que embaralha as cartas na mecânica do par impostor",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-size",
+					"objectClass": "AuxEmbaralhar",
+					"sid": 115910237886178,
+					"parameters": {
+						"width": "0",
+						"height": "1",
+						"depth": "1"
+					}
+				}
+			],
+			"sid": 486218051521187,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-all",
+							"objectClass": "System",
+							"sid": 600604358989773,
+							"parameters": {
+								"object": "Card"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 745367548523671,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 121986207962927,
+									"parameters": {
+										"object": "Card"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "push",
+									"objectClass": "AuxEmbaralhar",
+									"sid": 809693921756916,
+									"parameters": {
+										"where": "back",
+										"value": "Card.X & \",\" & Card.Y",
+										"axis": "x"
+									}
+								}
+							],
+							"sid": 655666312193762
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "shuffle",
+							"objectClass": "AuxEmbaralhar",
+							"sid": 918104612995275,
+							"parameters": {
+								"axis": "x"
+							}
+						}
+					],
+					"sid": 189884375665883
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-all",
+							"objectClass": "System",
+							"sid": 772297123819671,
+							"parameters": {
+								"object": "Card"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 791802459600663,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 719163223025989,
+									"parameters": {
+										"object": "Card"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "Card",
+									"sid": 658563048555967,
+									"parameters": {
+										"x": "int(tokenat(AuxEmbaralhar.Back, 0, \",\"))",
+										"y": "int(tokenat(AuxEmbaralhar.Back, 1, \",\"))"
+									}
+								},
+								{
+									"id": "pop",
+									"objectClass": "AuxEmbaralhar",
+									"sid": 145591955540902,
+									"parameters": {
+										"where": "back",
+										"axis": "x"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Card",
+									"sid": 548977598680779,
+									"parameters": {
+										"animation": "\"CardBack\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Card",
+									"sid": 987811572216923,
+									"parameters": {
+										"instance-variable": "FaceUp",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 773807360966159
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "comment",
 			"text": "Funcionalidade de clicar e comparar cartas"
 		},
 		{
@@ -600,61 +757,13 @@
 											}
 										}
 									],
-									"actions": [],
-									"sid": 857398464862513,
-									"children": [
+									"actions": [
 										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "pick-all",
-													"objectClass": "System",
-													"sid": 165427226381168,
-													"parameters": {
-														"object": "Card"
-													}
-												}
-											],
-											"actions": [],
-											"sid": 519156510347752,
-											"children": [
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "is-boolean-instance-variable-set",
-															"objectClass": "Card",
-															"sid": 315774504503664,
-															"parameters": {
-																"instance-variable": "FaceUp"
-															}
-														}
-													],
-													"actions": [
-														{
-															"id": "set-boolean-instvar",
-															"objectClass": "Card",
-															"sid": 151676925548064,
-															"parameters": {
-																"instance-variable": "FaceUp",
-																"value": "false"
-															}
-														},
-														{
-															"id": "set-animation",
-															"objectClass": "Card",
-															"sid": 447772590157904,
-															"parameters": {
-																"animation": "\"CardBack\"",
-																"from": "beginning"
-															}
-														}
-													],
-													"sid": 340605393224270
-												}
-											]
+											"callFunction": "EmbaralharCartas",
+											"sid": 503546107950538
 										}
 									],
+									"sid": 857398464862513,
 									"isOrBlock": true
 								},
 								{
@@ -867,22 +976,6 @@
 					"parameters": {
 						"text": "floor(gTime / 60) & \":\" & zeropad(floor(gTime % 60), 2)"
 					}
-				},
-				{
-					"id": "set-text",
-					"objectClass": "CountCardsTest",
-					"sid": 502436983876369,
-					"parameters": {
-						"text": "Card.Count - 1"
-					}
-				},
-				{
-					"id": "set-text",
-					"objectClass": "matchesTest",
-					"sid": 983771541718435,
-					"parameters": {
-						"text": "gMatches"
-					}
 				}
 			],
 			"sid": 736417837065511,
@@ -999,7 +1092,7 @@
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "BotaoVoltarHomeInv"
+						"object-clicked": "BotaoVoltarNiveisInv"
 					}
 				}
 			],
@@ -1025,21 +1118,97 @@
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "ButtonGoManualPracaConceicao"
+						"object-clicked": "BotaoManualPracaConceicao"
 					}
 				}
 			],
 			"actions": [
 				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 883783668334212,
+					"id": "set-visible",
+					"objectClass": "TutorialPracaConceicao",
+					"sid": 715540712796341,
 					"parameters": {
-						"layout": "ManualPracaConceicao"
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 778594250802985,
+					"parameters": {
+						"layer": "0",
+						"interactive": false
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Blocker",
+					"sid": 770671387009489,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 968177656144160,
+					"parameters": {
+						"time-scale": "0"
 					}
 				}
 			],
 			"sid": 597511706598822
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 321013378882068,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "BotaoFecharTutorial"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "TutorialPracaConceicao",
+					"sid": 949522799934194,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 917286027493417,
+					"parameters": {
+						"layer": "0",
+						"interactive": true
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Blocker",
+					"sid": 498690427138404,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 364053389089900,
+					"parameters": {
+						"time-scale": "1"
+					}
+				}
+			],
+			"sid": 893230689695939
 		}
 	],
 	"sid": 981606670686406

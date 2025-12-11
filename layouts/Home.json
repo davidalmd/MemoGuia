@@ -7,7 +7,7 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "TiledBackground",
+					"type": "PlanoFundoHome",
 					"properties": {
 						"initially-visible": true,
 						"origin": "top-left",

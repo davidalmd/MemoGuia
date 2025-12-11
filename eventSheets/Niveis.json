@@ -37,7 +37,7 @@
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "BotaoVoltarHomeInv"
+						"object-clicked": "BotaoVoltarNiveisInv"
 					}
 				}
 			],
@@ -63,21 +63,81 @@
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "ButtoGoFaseConstrucao"
+						"object-clicked": "BotaoAvisoFaseConstrucao"
 					}
 				}
 			],
 			"actions": [
 				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 911700554025539,
+					"id": "set-visible",
+					"objectClass": "avisoFaseConstrucao",
+					"sid": 536142469074594,
 					"parameters": {
-						"layout": "FaseEmConstrucao"
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 730239939157591,
+					"parameters": {
+						"layer": "0",
+						"interactive": false
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Blocker",
+					"sid": 882317487175103,
+					"parameters": {
+						"visibility": "visible"
 					}
 				}
 			],
 			"sid": 343062809911426
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 637377029203082,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "BotaoFecharNivelConstrucao"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "avisoFaseConstrucao",
+					"sid": 865814594078189,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 795383845309940,
+					"parameters": {
+						"layer": "0",
+						"interactive": true
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Blocker",
+					"sid": 610041031492643,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 567540881238310
 		}
 	],
 	"sid": 314309259994371

@@ -2,7 +2,7 @@
 	"name": "GamePlayPracaConceicao",
 	"layers": [
 		{
-			"name": "GUI",
+			"name": "Game",
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [
@@ -89,44 +89,9 @@
 						"angle": 0,
 						"zElevation": 0
 					}
-				}
-			],
-			"sid": 411285281738262,
-			"effectTypes": [],
-			"isInitiallyVisible": true,
-			"isInitiallyInteractive": true,
-			"isHTMLElementsLayer": false,
-			"color": [
-				1,
-				1,
-				1,
-				1
-			],
-			"backgroundColor": [
-				0.3686274509803922,
-				0.3686274509803922,
-				0.3686274509803922,
-				1
-			],
-			"isTransparent": true,
-			"parallaxX": 1,
-			"parallaxY": 1,
-			"scaleRate": 1,
-			"forceOwnTexture": false,
-			"renderingMode": "3d",
-			"drawOrder": "z-order",
-			"useRenderCells": false,
-			"blendMode": "normal",
-			"zElevation": 0,
-			"global": false
-		},
-		{
-			"name": "Game",
-			"overriden": 0,
-			"subLayers": [],
-			"instances": [
+				},
 				{
-					"type": "BotaoVoltarHomeInv",
+					"type": "BotaoHelper",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -134,22 +99,59 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 18,
-					"sid": 537875444418093,
+					"uid": 19,
+					"sid": 695173731174893,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 537875444418093,
+						"sid": 695173731174893,
 						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 84,
-						"y": 86,
-						"width": 99,
-						"height": 98,
+						"x": 1824,
+						"y": 992,
+						"width": 96,
+						"height": 96,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "BotaoManualPracaConceicao",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 26,
+					"sid": 106763855967100,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 106763855967100,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1823,
+						"y": 992,
+						"width": 102,
+						"height": 82,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -200,6 +202,43 @@
 					}
 				},
 				{
+					"type": "BotaoVoltarNiveisInv",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 18,
+					"sid": 537875444418093,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 537875444418093,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 84,
+						"y": 86,
+						"width": 99,
+						"height": 98,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
 					"type": "Card",
 					"properties": {
 						"initially-visible": true,
@@ -229,43 +268,6 @@
 						"height": 206,
 						"originX": 0,
 						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "BotaoHelper",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 19,
-					"sid": 695173731174893,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 695173731174893,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 1824,
-						"y": 992,
-						"width": 96,
-						"height": 96,
-						"originX": 0.5,
-						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -328,48 +330,102 @@
 						"angle": 0,
 						"zElevation": 0
 					}
-				},
+				}
+			],
+			"sid": 411285281738262,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "PopUps",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
 				{
-					"type": "matchesTest",
+					"type": "Blocker",
 					"properties": {
-						"text": "Text",
-						"enable-bbcode": true,
-						"font": "Arial",
-						"size": 32,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							0,
-							0,
-							0,
-							1
-						],
-						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
-						"wrapping": "word",
-						"text-direction": "ltr",
-						"icon-set": -1,
-						"initially-visible": true,
-						"origin": "top-left",
-						"read-aloud": false
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
 					},
-					"uid": 21,
-					"sid": 476166748245945,
+					"uid": 29,
+					"sid": 334350746829751,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 476166748245945,
+						"sid": 334350746829751,
 						"expanded": true
 					},
-					"showing": true,
-					"locked": false,
+					"showing": false,
+					"locked": true,
 					"world": {
-						"x": 1312,
-						"y": 64,
-						"width": 200,
-						"height": 64,
+						"x": 961.3324335266533,
+						"y": 539,
+						"width": 1927.3351329466934,
+						"height": 1087,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							0,
+							0,
+							0,
+							0.5
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "TutorialPracaConceicao",
+					"properties": {
+						"svg-file": 247360570530768,
+						"initially-visible": false,
+						"origin": "top-left"
+					},
+					"uid": 27,
+					"sid": 287936485018998,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 287936485018998,
+						"expanded": true
+					},
+					"showing": false,
+					"locked": true,
+					"world": {
+						"x": 541,
+						"y": 178,
+						"width": 839,
+						"height": 747,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -383,60 +439,7 @@
 					}
 				},
 				{
-					"type": "CountCardsTest",
-					"properties": {
-						"text": "Text",
-						"enable-bbcode": true,
-						"font": "Arial",
-						"size": 32,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							0,
-							0,
-							0,
-							1
-						],
-						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
-						"wrapping": "word",
-						"text-direction": "ltr",
-						"icon-set": -1,
-						"initially-visible": true,
-						"origin": "top-left",
-						"read-aloud": false
-					},
-					"uid": 22,
-					"sid": 571036041983066,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 571036041983066,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 1312,
-						"y": 128,
-						"width": 200,
-						"height": 64,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "ButtonGoManualPracaConceicao",
+					"type": "BotaoFecharTutorial",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -444,22 +447,22 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 26,
-					"sid": 106763855967100,
+					"uid": 30,
+					"sid": 726228557871591,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 106763855967100,
+						"sid": 726228557871591,
 						"expanded": true
 					},
-					"showing": true,
-					"locked": false,
+					"showing": false,
+					"locked": true,
 					"world": {
-						"x": 1823,
-						"y": 992,
-						"width": 102,
-						"height": 82,
+						"x": 585.374586557552,
+						"y": 235.03132975485198,
+						"width": 50.81189163920794,
+						"height": 48.25079147625598,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -512,12 +515,24 @@
 		{
 			"type": "Deck",
 			"properties": {
-				"width": 10,
+				"width": 12,
 				"height": 1,
 				"depth": 1
 			},
 			"uid": 2,
 			"sid": 708775129628860,
+			"tags": "",
+			"instanceVariables": {}
+		},
+		{
+			"type": "AuxEmbaralhar",
+			"properties": {
+				"width": 10,
+				"height": 1,
+				"depth": 1
+			},
+			"uid": 24,
+			"sid": 526095227325752,
 			"tags": "",
 			"instanceVariables": {}
 		}

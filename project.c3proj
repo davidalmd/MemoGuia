@@ -9,7 +9,7 @@
 		{
 			"type": "plugin",
 			"id": "Arr",
-			"name": "Matriz",
+			"name": "Array",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -17,6 +17,13 @@
 			"type": "plugin",
 			"id": "Mouse",
 			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "SVGPicture",
+			"name": "SVG Picture",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -30,14 +37,14 @@
 		{
 			"type": "plugin",
 			"id": "Text",
-			"name": "Texto",
+			"name": "Text",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "TiledBg",
-			"name": "Plano de Fundo em Blocos",
+			"name": "Tiled Background",
 			"author": "Scirra",
 			"bundled": false
 		}
@@ -49,30 +56,28 @@
 			"Mouse",
 			"Deck",
 			"TextTime",
-			"TiledBackground",
+			"PlanoFundoHome",
 			"BotaoJogar",
-			"PlanoDeFundoEmBlocos",
-			"PlanoDeFundoEmBlocos2",
 			"BotaoPracaConceicao",
-			"PlanodeFundoNiveis",
 			"BotaoVoltar",
 			"HistoriaPracaConceicao",
 			"BotaoJogarGamePlay",
-			"BotaoVoltarpHome",
-			"Sprite",
-			"BotaoVoltarHomeInv",
+			"PlanoFundoNiveis",
+			"BotaoVoltarNiveisInv",
 			"BotaoVoltarNiveis",
 			"backgroundGame",
 			"LogoMain",
 			"BotaoHelper",
-			"matchesTest",
-			"CountCardsTest",
-			"BackgroundManualPracaConceicao",
-			"BackButtonGamePlayPracaoConceicaoInv",
-			"ButtonGoManualPracaConceicao",
-			"BackgroundFaseEmConstrucao",
-			"ButtonBackLevelsInv",
-			"ButtoGoFaseConstrucao"
+			"BotaoManualPracaConceicao",
+			"BotaoAvisoFaseConstrucao",
+			"avisoFaseConstrucao",
+			"BotaoFecharNivelConstrucao",
+			"BalaoFalaEstrela",
+			"TextoFalaEstrela",
+			"TutorialPracaConceicao",
+			"Blocker",
+			"BotaoFecharTutorial",
+			"AuxEmbaralhar"
 		],
 		"subfolders": []
 	},
@@ -88,9 +93,7 @@
 			"GamePlayPracaConceicao",
 			"Home",
 			"Niveis",
-			"HistoriaPracaConceicao",
-			"ManualPracaConceicao",
-			"FaseEmConstrucao"
+			"HistoriaPracaConceicao"
 		],
 		"subfolders": []
 	},
@@ -100,9 +103,7 @@
 			"GlobalVariables",
 			"Home",
 			"Niveis",
-			"HistoriaPracaConceicao",
-			"ManualPracaConceicao",
-			"FaseEmConstrucao"
+			"HistoriaPracaConceicao"
 		],
 		"subfolders": []
 	},
@@ -189,7 +190,40 @@
 			"subfolders": []
 		},
 		"general": {
-			"items": [],
+			"items": [
+				{
+					"name": "alert dialog.svg",
+					"type": "image/svg+xml",
+					"sid": 998045712644700,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "TRANSPORTADORAS (1) 1.svg",
+					"type": "image/svg+xml",
+					"sid": 379200594365586,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Qual ponto turístico você quer conhecer e se desafiar_.svg",
+					"type": "image/svg+xml",
+					"sid": 820463248100803,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "popuCartas.svg",
+					"type": "image/svg+xml",
+					"sid": 247360570530768,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		}
 	},

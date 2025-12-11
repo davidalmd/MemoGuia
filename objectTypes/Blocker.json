@@ -1,7 +1,7 @@
 {
-	"name": "ButtonGoManualPracaConceicao",
+	"name": "Blocker",
 	"plugin-id": "Sprite",
-	"sid": 631671033804849,
+	"sid": 713004070667736,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -20,13 +20,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 3176411,
+						"imageSpriteId": 7834741,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 231416724256745,
+				"sid": 987254672977292,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

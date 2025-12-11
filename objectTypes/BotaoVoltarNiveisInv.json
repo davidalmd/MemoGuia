@@ -1,7 +1,7 @@
 {
-	"name": "ButtoGoFaseConstrucao",
+	"name": "BotaoVoltarNiveisInv",
 	"plugin-id": "Sprite",
-	"sid": 521557826396452,
+	"sid": 285181166950281,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -20,13 +20,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 9186961,
+						"imageSpriteId": 3791626,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 976602168385463,
+				"sid": 878502895584515,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

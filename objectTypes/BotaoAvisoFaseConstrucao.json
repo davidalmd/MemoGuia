@@ -1,7 +1,7 @@
 {
-	"name": "BackgroundManualPracaConceicao",
+	"name": "BotaoAvisoFaseConstrucao",
 	"plugin-id": "Sprite",
-	"sid": 795574054044079,
+	"sid": 521557826396452,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -12,33 +12,21 @@
 			{
 				"frames": [
 					{
-						"width": 1920,
-						"height": 1080,
+						"width": 250,
+						"height": 250,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 3859116,
-						"collisionPoly": {
-							"points": [
-								0.0078125,
-								0,
-								1,
-								0.013888888888888888,
-								0.9921875,
-								1,
-								0,
-								0.9861111111111112
-							]
-						},
+						"imageSpriteId": 9186961,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 984176056584538,
+				"sid": 976602168385463,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

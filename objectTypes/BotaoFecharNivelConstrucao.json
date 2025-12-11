@@ -1,7 +1,7 @@
 {
-	"name": "BotaoVoltarpHome",
+	"name": "BotaoFecharNivelConstrucao",
 	"plugin-id": "Sprite",
-	"sid": 595137209120481,
+	"sid": 968532517404233,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -12,33 +12,21 @@
 			{
 				"frames": [
 					{
-						"width": 1920,
-						"height": 1080,
+						"width": 250,
+						"height": 250,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 3391988,
-						"collisionPoly": {
-							"points": [
-								0.5036458333333333,
-								0.06574074074074074,
-								0.5333333333333333,
-								0.06574074074074074,
-								0.5328125,
-								0.9342592592592592,
-								0.5041666666666667,
-								0.9342592592592592
-							]
-						},
+						"imageSpriteId": 491361,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 149111778806300,
+				"sid": 115926017139391,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
