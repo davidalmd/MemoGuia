@@ -252,7 +252,8 @@
 					"tags": "",
 					"instanceVariables": {
 						"CardFaceFrame": 0,
-						"FaceUp": false
+						"FaceUp": false,
+						"EmJogo": false
 					},
 					"behaviors": {},
 					"instanceFolderItem": {
@@ -262,8 +263,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": -316,
-						"y": 449,
+						"x": -260,
+						"y": 405,
 						"width": 161,
 						"height": 206,
 						"originX": 0,

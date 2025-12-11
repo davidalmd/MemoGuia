@@ -18,6 +18,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 221185900381340
+		},
+		{
+			"name": "EmJogo",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 985598633540507
 		}
 	],
 	"behaviorTypes": [],

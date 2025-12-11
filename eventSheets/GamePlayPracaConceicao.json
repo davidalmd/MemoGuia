@@ -401,6 +401,15 @@
 										"instance-variable": "FaceUp",
 										"value": "false"
 									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Card",
+									"sid": 858458043353833,
+									"parameters": {
+										"instance-variable": "EmJogo",
+										"value": "true"
+									}
 								}
 							],
 							"sid": 205319538972635
@@ -438,6 +447,10 @@
 			"sid": 486218051521187,
 			"children": [
 				{
+					"eventType": "comment",
+					"text": "Pega todas as coordenadas das cartas e adiciona em um array auxiliar"
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
@@ -446,6 +459,14 @@
 							"sid": 600604358989773,
 							"parameters": {
 								"object": "Card"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Card",
+							"sid": 790582000322757,
+							"parameters": {
+								"instance-variable": "EmJogo"
 							}
 						}
 					],
@@ -481,19 +502,27 @@
 					]
 				},
 				{
+					"eventType": "comment",
+					"text": "Embaralha os valores desse array que populamos com as coordenadas"
+				},
+				{
 					"eventType": "block",
 					"conditions": [],
 					"actions": [
 						{
 							"id": "shuffle",
 							"objectClass": "AuxEmbaralhar",
-							"sid": 918104612995275,
+							"sid": 881066484089927,
 							"parameters": {
 								"axis": "x"
 							}
 						}
 					],
-					"sid": 189884375665883
+					"sid": 810698665421145
+				},
+				{
+					"eventType": "comment",
+					"text": "Percorre todas as cartas, mudando a coordenada delas pela coordenada embaralhada do array, e depois retira essa coordenada para que a próxima carta não vá para a mesma posição"
 				},
 				{
 					"eventType": "block",
@@ -504,6 +533,14 @@
 							"sid": 772297123819671,
 							"parameters": {
 								"object": "Card"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Card",
+							"sid": 715619770428969,
+							"parameters": {
+								"instance-variable": "EmJogo"
 							}
 						}
 					],
@@ -596,6 +633,10 @@
 			"actions": [],
 			"sid": 689463075831186,
 			"children": [
+				{
+					"eventType": "comment",
+					"text": "Verifica se já temos duas cartas levantadas para poder comparar"
+				},
 				{
 					"eventType": "block",
 					"conditions": [
@@ -713,6 +754,10 @@
 					"sid": 813762390349067,
 					"children": [
 						{
+							"eventType": "comment",
+							"text": "Compara se essas duas cartas levantadas são sequenciais (mesma imagem)"
+						},
+						{
 							"eventType": "block",
 							"conditions": [
 								{
@@ -777,61 +822,55 @@
 											"id": "else",
 											"objectClass": "System",
 											"sid": 365038435210146
+										},
+										{
+											"id": "pick-all",
+											"objectClass": "System",
+											"sid": 855123518703088,
+											"parameters": {
+												"object": "Card"
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Card",
+											"sid": 246922934601952,
+											"parameters": {
+												"instance-variable": "EmJogo"
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Card",
+											"sid": 843106623632179,
+											"parameters": {
+												"instance-variable": "FaceUp"
+											}
 										}
 									],
-									"actions": [],
-									"sid": 301319808429977,
-									"children": [
+									"actions": [
 										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "pick-all",
-													"objectClass": "System",
-													"sid": 964576140733310,
-													"parameters": {
-														"object": "Card"
-													}
-												}
-											],
-											"actions": [],
-											"sid": 967606275096576,
-											"children": [
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "is-boolean-instance-variable-set",
-															"objectClass": "Card",
-															"sid": 951089997236652,
-															"parameters": {
-																"instance-variable": "FaceUp"
-															}
-														}
-													],
-													"actions": [
-														{
-															"id": "destroy",
-															"objectClass": "Card",
-															"sid": 597625937392279
-														},
-														{
-															"id": "add-to-eventvar",
-															"objectClass": "System",
-															"sid": 542906436968299,
-															"parameters": {
-																"variable": "gMatches",
-																"value": "1"
-															}
-														}
-													],
-													"sid": 204565449644147
-												}
-											]
+											"id": "destroy",
+											"objectClass": "Card",
+											"sid": 579961863744079
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 253564759280986,
+											"parameters": {
+												"variable": "gMatches",
+												"value": "1"
+											}
 										}
-									]
+									],
+									"sid": 301319808429977
 								}
 							]
+						},
+						{
+							"eventType": "comment",
+							"text": "Se não são iguais, volta as duas para baixo"
 						},
 						{
 							"eventType": "block",
@@ -840,63 +879,49 @@
 									"id": "else",
 									"objectClass": "System",
 									"sid": 200493704657585
+								},
+								{
+									"id": "pick-all",
+									"objectClass": "System",
+									"sid": 512619419405117,
+									"parameters": {
+										"object": "Card"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Card",
+									"sid": 153183088571334,
+									"parameters": {
+										"instance-variable": "FaceUp"
+									}
 								}
 							],
-							"actions": [],
-							"sid": 793063654268220,
-							"children": [
+							"actions": [
 								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "pick-all",
-											"objectClass": "System",
-											"sid": 552567593272512,
-											"parameters": {
-												"object": "Card"
-											}
-										}
-									],
-									"actions": [],
-									"sid": 344269700915124,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "is-boolean-instance-variable-set",
-													"objectClass": "Card",
-													"sid": 199352482544501,
-													"parameters": {
-														"instance-variable": "FaceUp"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-boolean-instvar",
-													"objectClass": "Card",
-													"sid": 315756892374144,
-													"parameters": {
-														"instance-variable": "FaceUp",
-														"value": "false"
-													}
-												},
-												{
-													"id": "set-animation",
-													"objectClass": "Card",
-													"sid": 770995408814901,
-													"parameters": {
-														"animation": "\"CardBack\"",
-														"from": "beginning"
-													}
-												}
-											],
-											"sid": 600715198863185
-										}
-									]
+									"id": "set-boolean-instvar",
+									"objectClass": "Card",
+									"sid": 856093745167419,
+									"parameters": {
+										"instance-variable": "FaceUp",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Card",
+									"sid": 976292749790423,
+									"parameters": {
+										"animation": "\"CardBack\"",
+										"from": "beginning"
+									}
 								}
-							]
+							],
+							"sid": 793063654268220
+						},
+						{
+							"eventType": "comment",
+							"text": "Reinicializa as variáveis auxiliares"
 						},
 						{
 							"eventType": "block",
