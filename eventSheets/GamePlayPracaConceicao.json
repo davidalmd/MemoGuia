@@ -2,6 +2,10 @@
 	"name": "GamePlayPracaConceicao",
 	"events": [
 		{
+			"eventType": "include",
+			"includeSheet": "Musica"
+		},
+		{
 			"eventType": "comment",
 			"text": "Inicializa as variáveis"
 		},
@@ -97,10 +101,131 @@
 					"parameters": {
 						"variable": "gTime"
 					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 766997714879863,
+					"parameters": {
+						"variable": "gNumberErrors",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 766171066863272,
+					"parameters": {
+						"variable": "gTimeDecrease",
+						"value": "15"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Blocker",
+					"sid": 644530350073817,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 492358462330195,
+					"parameters": {
+						"layer": "0",
+						"interactive": true
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 296693319519281,
+					"parameters": {
+						"layer": "1",
+						"interactive": false
+					}
+				},
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 457691185717517,
+					"parameters": {
+						"time-scale": "1"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "BotaoFecharPopUpDerrota",
+					"sid": 977615051145380,
+					"parameters": {
+						"layer": "1"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "BotaoFecharPopUpVitoria",
+					"sid": 933209941288726,
+					"parameters": {
+						"layer": "1"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "BotaoProximaFase",
+					"sid": 754851850136653,
+					"parameters": {
+						"layer": "1"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "BotaoTentarNovamente",
+					"sid": 950153446857388,
+					"parameters": {
+						"layer": "1"
+					}
 				}
 			],
 			"sid": 731050130239097,
 			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-tag-playing",
+							"objectClass": "Audio",
+							"sid": 668061947135594,
+							"parameters": {
+								"tag": "\"MusicaFundoJogo\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 736154481551683,
+							"parameters": {
+								"tag": "\"MusicaFundoHome\""
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 460675941692578,
+							"parameters": {
+								"audio-file": "memoGuiaJogo",
+								"loop": "looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"MusicaFundoJogo\""
+							}
+						}
+					],
+					"sid": 576053175373869
+				},
 				{
 					"eventType": "comment",
 					"text": "Popula o nosso deck de cartas (array)"
@@ -806,6 +931,54 @@
 										{
 											"callFunction": "EmbaralharCartas",
 											"sid": 503546107950538
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 270800597837559,
+											"parameters": {
+												"variable": "gNumberErrors",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 291907578645212,
+											"parameters": {
+												"variable": "gTime",
+												"value": "max(0, gTime - (gNumberErrors * gTimeDecrease))"
+											}
+										},
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 465259638380402,
+											"parameters": {
+												"object-to-create": "TextPenalty",
+												"layer": "0",
+												"x": "TextTimer.X - 150",
+												"y": "TextTimer.Y + 30",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "TextPenalty",
+											"sid": 866592092024542,
+											"parameters": {
+												"text": "\"-\"&(gTimeDecrease * gNumberErrors)&\"s\""
+											}
+										},
+										{
+											"id": "set-angle-of-motion",
+											"objectClass": "TextPenalty",
+											"sid": 689922479096338,
+											"behaviorType": "Bullet",
+											"parameters": {
+												"angle": "270"
+											}
 										}
 									],
 									"sid": 857398464862513,
@@ -972,31 +1145,12 @@
 					"id": "every-tick",
 					"objectClass": "System",
 					"sid": 487316829406533
-				},
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 553107703001407,
-					"parameters": {
-						"variable": "gTime",
-						"comparison": 4,
-						"value": "1"
-					}
 				}
 			],
 			"actions": [
 				{
-					"id": "subtract-from-eventvar",
-					"objectClass": "System",
-					"sid": 571962423252582,
-					"parameters": {
-						"variable": "gTime",
-						"value": "dt"
-					}
-				},
-				{
 					"id": "set-text",
-					"objectClass": "TextTime",
+					"objectClass": "TextTimer",
 					"sid": 582936490125424,
 					"parameters": {
 						"text": "floor(gTime / 60) & \":\" & zeropad(floor(gTime % 60), 2)"
@@ -1005,6 +1159,33 @@
 			],
 			"sid": 736417837065511,
 			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 557446023048511,
+							"parameters": {
+								"variable": "gTime",
+								"comparison": 4,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 430717741548579,
+							"parameters": {
+								"variable": "gTime",
+								"value": "dt"
+							}
+						}
+					],
+					"sid": 321532672931663
+				},
 				{
 					"eventType": "comment",
 					"text": "Verificar fim do jogo - Vitória (Sobrando apenas o impostor)"
@@ -1046,20 +1227,81 @@
 					],
 					"actions": [
 						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 432765809423834,
+							"id": "move-to-layer",
+							"objectClass": "BotaoFecharPopUpDerrota",
+							"sid": 424625597063209,
 							"parameters": {
-								"seconds": "1.0",
-								"use-timescale": true
+								"layer": "0"
 							}
 						},
 						{
-							"id": "go-to-layout",
-							"objectClass": "System",
-							"sid": 560347787687777,
+							"id": "move-to-layer",
+							"objectClass": "BotaoTentarNovamente",
+							"sid": 261626016699426,
 							"parameters": {
-								"layout": "Home"
+								"layer": "0"
+							}
+						},
+						{
+							"id": "move-to-layer",
+							"objectClass": "BotaoMusica",
+							"sid": 358632978429032,
+							"parameters": {
+								"layer": "1"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 993323993108188,
+							"parameters": {
+								"audio-file": "WinSound",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"MusicaVitoria\""
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PopUpVitoria",
+							"sid": 866589170441150,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 707212696885714,
+							"parameters": {
+								"layer": "0",
+								"interactive": false
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 239854111773625,
+							"parameters": {
+								"layer": "1",
+								"interactive": true
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Blocker",
+							"sid": 737866196884682,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 332277721699871,
+							"parameters": {
+								"time-scale": "0"
 							}
 						}
 					],
@@ -1075,7 +1317,7 @@
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 424287569020277,
+							"sid": 382726964670207,
 							"parameters": {
 								"variable": "gTime",
 								"comparison": 3,
@@ -1085,20 +1327,81 @@
 					],
 					"actions": [
 						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 593355804983151,
+							"id": "move-to-layer",
+							"objectClass": "BotaoFecharPopUpVitoria",
+							"sid": 969480114807963,
 							"parameters": {
-								"seconds": "1.0",
-								"use-timescale": true
+								"layer": "0"
 							}
 						},
 						{
-							"id": "go-to-layout",
-							"objectClass": "System",
-							"sid": 675995746423274,
+							"id": "move-to-layer",
+							"objectClass": "BotaoProximaFase",
+							"sid": 347710439684592,
 							"parameters": {
-								"layout": "Home"
+								"layer": "0"
+							}
+						},
+						{
+							"id": "move-to-layer",
+							"objectClass": "BotaoMusica",
+							"sid": 392957622730564,
+							"parameters": {
+								"layer": "1"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 371474515210983,
+							"parameters": {
+								"audio-file": "LoseSound",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"MusicaDerrota\""
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PopUpDerrota",
+							"sid": 222137244528866,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 537715706142017,
+							"parameters": {
+								"layer": "0",
+								"interactive": false
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 612041281840936,
+							"parameters": {
+								"layer": "1",
+								"interactive": true
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Blocker",
+							"sid": 272669055534168,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 835047857045021,
+							"parameters": {
+								"time-scale": "0"
 							}
 						}
 					],
@@ -1166,6 +1469,15 @@
 					}
 				},
 				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 508668850320673,
+					"parameters": {
+						"layer": "1",
+						"interactive": true
+					}
+				},
+				{
 					"id": "set-visible",
 					"objectClass": "Blocker",
 					"sid": 770671387009489,
@@ -1217,6 +1529,15 @@
 					}
 				},
 				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 435047758493350,
+					"parameters": {
+						"layer": "1",
+						"interactive": false
+					}
+				},
+				{
 					"id": "set-visible",
 					"objectClass": "Blocker",
 					"sid": 498690427138404,
@@ -1234,6 +1555,110 @@
 				}
 			],
 			"sid": 893230689695939
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 908463767781605,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "BotaoFecharPopUpVitoria"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 278767048386951,
+					"parameters": {
+						"layout": "Home"
+					}
+				}
+			],
+			"sid": 820013589817600
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 388828548688142,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "BotaoProximaFase"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 327087377816256,
+					"parameters": {
+						"layout": "Niveis"
+					}
+				}
+			],
+			"sid": 953172288353228
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 369396174806833,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "BotaoFecharPopUpDerrota"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 853713500134222,
+					"parameters": {
+						"layout": "Niveis"
+					}
+				}
+			],
+			"sid": 992100561047592
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 826290155471251,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "BotaoTentarNovamente"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 576742765396060,
+					"parameters": {
+						"layout": "GamePlayPracaConceicao"
+					}
+				}
+			],
+			"sid": 102341207311113
 		}
 	],
 	"sid": 981606670686406

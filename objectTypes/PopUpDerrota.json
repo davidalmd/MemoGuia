@@ -1,0 +1,16 @@
+{
+	"name": "PopUpDerrota",
+	"plugin-id": "SVGPicture",
+	"sid": 927702316585039,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 414142485501796
+		}
+	],
+	"effectTypes": []
+}

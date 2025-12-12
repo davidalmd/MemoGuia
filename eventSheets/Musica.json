@@ -1,0 +1,69 @@
+{
+	"name": "Musica",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 768034479466941
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "BotaoMusica",
+					"sid": 771214145712278,
+					"parameters": {
+						"frame-number": "int(gSomMudo)"
+					}
+				}
+			],
+			"sid": 832943697623507
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 481613485682892,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "BotaoMusica"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "toggle-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 161454535323675,
+					"parameters": {
+						"variable": "gSomMudo"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "BotaoMusica",
+					"sid": 345778198303468,
+					"parameters": {
+						"frame-number": "int(gSomMudo)"
+					}
+				},
+				{
+					"id": "set-master-volume",
+					"objectClass": "Audio",
+					"sid": 337090985417239,
+					"parameters": {
+						"db": "int(gSomMudo) * -100"
+					}
+				}
+			],
+			"sid": 813525938797527
+		}
+	],
+	"sid": 921550092706891
+}

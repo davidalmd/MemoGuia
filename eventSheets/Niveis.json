@@ -2,6 +2,52 @@
 	"name": "Niveis",
 	"events": [
 		{
+			"eventType": "include",
+			"includeSheet": "Musica"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 207702567035950
+				},
+				{
+					"id": "is-tag-playing",
+					"objectClass": "Audio",
+					"sid": 357492691880283,
+					"parameters": {
+						"tag": "\"MusicaFundoHome\""
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 934860311869901,
+					"parameters": {
+						"tag": "\"MusicaFundoJogo\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 704600056911154,
+					"parameters": {
+						"audio-file": "memoGuiaHome",
+						"loop": "looping",
+						"volume": "-10",
+						"stereo-pan": "0",
+						"tag-optional": "\"MusicaFundoHome\""
+					}
+				}
+			],
+			"sid": 754236132084379
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{

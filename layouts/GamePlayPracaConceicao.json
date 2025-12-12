@@ -280,7 +280,7 @@
 					}
 				},
 				{
-					"type": "TextTime",
+					"type": "TextTimer",
 					"properties": {
 						"text": "Timer",
 						"enable-bbcode": true,
@@ -322,6 +322,118 @@
 						"height": 64,
 						"originX": 0,
 						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "TextPenalty",
+					"properties": {
+						"text": "Penalty",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 45,
+						"line-height": 7,
+						"bold": true,
+						"italic": true,
+						"color": [
+							1,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 28,
+					"sid": 364533227927963,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Fade": {
+							"properties": {
+								"fade-in-time": 0,
+								"wait-time": 0.5,
+								"fade-out-time": 1,
+								"destroy": true,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Bullet": {
+							"properties": {
+								"speed": 40,
+								"acceleration": 0,
+								"gravity": 0,
+								"bounce-off-solids": false,
+								"set-angle": false,
+								"step": false,
+								"enabled": true
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 364533227927963,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 2036,
+						"y": 228,
+						"width": 267,
+						"height": 81,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "BotaoMusica",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 1,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 44,
+					"sid": 256810585142189,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 256810585142189,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 75,
+						"y": 1005,
+						"width": 112.5,
+						"height": 112.5,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -464,6 +576,246 @@
 						"y": 235.03132975485198,
 						"width": 50.81189163920794,
 						"height": 48.25079147625598,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PopUpVitoria",
+					"properties": {
+						"svg-file": 978634130333977,
+						"initially-visible": false,
+						"origin": "top-left"
+					},
+					"uid": 37,
+					"sid": 845763701782413,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Fade": {
+							"properties": {
+								"fade-in-time": 0.75,
+								"wait-time": 0,
+								"fade-out-time": 0,
+								"destroy": true,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 845763701782413,
+						"expanded": true
+					},
+					"showing": false,
+					"locked": true,
+					"world": {
+						"x": 539,
+						"y": 174,
+						"width": 852,
+						"height": 758.1865284974093,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "BotaoFecharPopUpVitoria",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 38,
+					"sid": 909465558417928,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 909465558417928,
+						"expanded": true
+					},
+					"showing": false,
+					"locked": true,
+					"world": {
+						"x": 813.5,
+						"y": 812,
+						"width": 185,
+						"height": 62,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "BotaoProximaFase",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 39,
+					"sid": 692248219191848,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 692248219191848,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1067,
+						"y": 813,
+						"width": 279,
+						"height": 65,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PopUpDerrota",
+					"properties": {
+						"svg-file": 127292300436467,
+						"initially-visible": false,
+						"origin": "top-left"
+					},
+					"uid": 40,
+					"sid": 168523912324317,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Fade": {
+							"properties": {
+								"fade-in-time": 0.75,
+								"wait-time": 0,
+								"fade-out-time": 0,
+								"destroy": true,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 168523912324317,
+						"expanded": true
+					},
+					"showing": false,
+					"locked": true,
+					"world": {
+						"x": 539,
+						"y": 174,
+						"width": 852,
+						"height": 758.1865284974093,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "BotaoTentarNovamente",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 41,
+					"sid": 430014732699559,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 430014732699559,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1069.9286691201214,
+						"y": 820,
+						"width": 351.6667310363416,
+						"height": 66,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "BotaoFecharPopUpDerrota",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 42,
+					"sid": 484116611562239,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 484116611562239,
+						"expanded": true
+					},
+					"showing": false,
+					"locked": true,
+					"world": {
+						"x": 813.5,
+						"y": 812,
+						"width": 185,
+						"height": 62,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

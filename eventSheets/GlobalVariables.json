@@ -150,6 +150,36 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 558817163906778
+		},
+		{
+			"eventType": "variable",
+			"name": "gNumberErrors",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 342461858491855
+		},
+		{
+			"eventType": "variable",
+			"name": "gTimeDecrease",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 190222481048689
+		},
+		{
+			"eventType": "variable",
+			"name": "gSomMudo",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 645385158463320
 		}
 	],
 	"sid": 981259855991635

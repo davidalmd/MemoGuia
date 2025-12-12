@@ -1,0 +1,16 @@
+{
+	"name": "PopUpVitoria",
+	"plugin-id": "SVGPicture",
+	"sid": 415692938214387,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 988995194872252
+		}
+	],
+	"effectTypes": []
+}

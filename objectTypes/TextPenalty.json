@@ -1,0 +1,21 @@
+{
+	"name": "TextPenalty",
+	"plugin-id": "Text",
+	"sid": 528146849662629,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 295402860393084
+		},
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 422724219482889
+		}
+	],
+	"effectTypes": []
+}

@@ -2,6 +2,52 @@
 	"name": "HistoriaPracaConceicao",
 	"events": [
 		{
+			"eventType": "include",
+			"includeSheet": "Musica"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 833813365176572
+				},
+				{
+					"id": "is-tag-playing",
+					"objectClass": "Audio",
+					"sid": 358480476479415,
+					"parameters": {
+						"tag": "\"MusicaFundoHome\""
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 734133606925614,
+					"parameters": {
+						"tag": "\"MusicaFundoJogo\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 523591234967919,
+					"parameters": {
+						"audio-file": "memoGuiaHome",
+						"loop": "looping",
+						"volume": "-10",
+						"stereo-pan": "0",
+						"tag-optional": "\"MusicaFundoHome\""
+					}
+				}
+			],
+			"sid": 699493101803135
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
