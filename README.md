@@ -1,8 +1,8 @@
-# 🧩 MemoGuia (Vire & Viaje - Belo Jardim)
+# 🧩 MemoGuia - Belo Jardim
 
 > **Projeto acadêmico de Engenharia de Software - IFPE Campus Belo Jardim**
 
-![Status](https://img.shields.io/badge/Status-Em_Desenvolvimento-yellow)
+![Status](https://img.shields.io/badge/Status-MVP_Finalizado-blueviolet)
 ![Engine](https://img.shields.io/badge/Engine-Construct_3-green)
 ![Platform](https://img.shields.io/badge/Plataforma-Web_|_HTML5-blue)
 
@@ -47,7 +47,7 @@ Este projeto foi desenvolvido utilizando ferramentas focadas em produtividade e 
 
 Como o projeto é focado em **Web/HTML5**, ele pode ser executado diretamente no navegador.
 
-1.  Acesse o link da build: *[Em Desenvolvimento]*
+1.  Acesse o link da *publish* no **Construct Arcade**: [MemoGuia](https://www.construct.net/en/free-online-games/memoguia-82445/play)
 2.  Ou clone este repositório e abra o projeto no Construct 3.
 
 ### Pré-requisitos
@@ -67,4 +67,4 @@ Projeto desenvolvido por discentes do curso de **Bacharelado em Engenharia de So
 | **Luiz Carlos** | Game Designer, Tech Lead e Programador |
 
 ---
-*Documentação baseada no Game Design Document (GDD) v1.0 - MemoGuia.*
+*Documentação baseada no Game Design Document (GDD) v1.1 - MemoGuia.*
