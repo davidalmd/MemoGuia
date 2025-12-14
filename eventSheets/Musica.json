@@ -34,6 +34,14 @@
 						"click-type": "clicked",
 						"object-clicked": "BotaoMusica"
 					}
+				},
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 432666724443116,
+					"parameters": {
+						"object": "BotaoMusica"
+					}
 				}
 			],
 			"actions": [
@@ -62,7 +70,8 @@
 					}
 				}
 			],
-			"sid": 813525938797527
+			"sid": 813525938797527,
+			"isOrBlock": true
 		}
 	],
 	"sid": 921550092706891

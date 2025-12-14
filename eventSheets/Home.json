@@ -59,6 +59,14 @@
 						"click-type": "clicked",
 						"object-clicked": "BotaoJogar"
 					}
+				},
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 380706150552800,
+					"parameters": {
+						"object": "BotaoJogar"
+					}
 				}
 			],
 			"actions": [
@@ -71,7 +79,8 @@
 					}
 				}
 			],
-			"sid": 953798255885031
+			"sid": 953798255885031,
+			"isOrBlock": true
 		}
 	],
 	"sid": 555050347213436

@@ -59,6 +59,14 @@
 						"click-type": "clicked",
 						"object-clicked": "BotaoJogarGamePlay"
 					}
+				},
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 183402047898704,
+					"parameters": {
+						"object": "BotaoJogarGamePlay"
+					}
 				}
 			],
 			"actions": [
@@ -71,7 +79,8 @@
 					}
 				}
 			],
-			"sid": 647809782945084
+			"sid": 647809782945084,
+			"isOrBlock": true
 		},
 		{
 			"eventType": "block",
@@ -85,6 +94,14 @@
 						"click-type": "clicked",
 						"object-clicked": "BotaoVoltarNiveis"
 					}
+				},
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 694185056251168,
+					"parameters": {
+						"object": "BotaoVoltarNiveis"
+					}
 				}
 			],
 			"actions": [
@@ -97,7 +114,8 @@
 					}
 				}
 			],
-			"sid": 563101848649683
+			"sid": 563101848649683,
+			"isOrBlock": true
 		}
 	],
 	"sid": 469925161746858

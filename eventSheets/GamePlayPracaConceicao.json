@@ -746,247 +746,319 @@
 					}
 				},
 				{
-					"id": "is-boolean-instance-variable-set",
-					"objectClass": "Card",
-					"sid": 287588346199921,
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 197515371393916,
 					"parameters": {
-						"instance-variable": "FaceUp"
-					},
-					"isInverted": true
+						"object": "Card"
+					}
 				}
 			],
 			"actions": [],
 			"sid": 689463075831186,
 			"children": [
 				{
-					"eventType": "comment",
-					"text": "Verifica se já temos duas cartas levantadas para poder comparar"
-				},
-				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 548781739064293,
-							"parameters": {
-								"variable": "gCardsCountPicked",
-								"comparison": 2,
-								"value": "2"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-animation",
+							"id": "is-boolean-instance-variable-set",
 							"objectClass": "Card",
-							"sid": 563080660793786,
+							"sid": 374799391482187,
 							"parameters": {
-								"animation": "\"CardFace\"",
-								"from": "beginning"
-							}
-						},
-						{
-							"id": "set-animation-frame",
-							"objectClass": "Card",
-							"sid": 753389534130449,
-							"parameters": {
-								"frame-number": "Card.CardFaceFrame"
-							}
-						},
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "Card",
-							"sid": 116433735652905,
-							"parameters": {
-								"instance-variable": "FaceUp",
-								"value": "true"
-							}
-						},
-						{
-							"id": "add-to-eventvar",
-							"objectClass": "System",
-							"sid": 164731365229990,
-							"parameters": {
-								"variable": "gCardsCountPicked",
-								"value": "1"
-							}
+								"instance-variable": "FaceUp"
+							},
+							"isInverted": true
 						}
 					],
-					"sid": 379810524521116
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 663966374473055,
-							"parameters": {
-								"variable": "gCardsCountPicked",
-								"comparison": 0,
-								"value": "1"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 187261296780954,
-							"parameters": {
-								"variable": "gFirstCardFrame",
-								"value": "Card.CardFaceFrame"
-							}
-						}
-					],
-					"sid": 634376343593899
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 356563063121609,
-							"parameters": {
-								"variable": "gCardsCountPicked",
-								"comparison": 0,
-								"value": "2"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 808620863018562,
-							"parameters": {
-								"variable": "gSecondCardFrame",
-								"value": "Card.CardFaceFrame"
-							}
-						},
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 167453119964537,
-							"parameters": {
-								"seconds": "gWaitSeconds",
-								"use-timescale": true
-							}
-						}
-					],
-					"sid": 813762390349067,
+					"actions": [],
+					"sid": 583097668880295,
 					"children": [
 						{
 							"eventType": "comment",
-							"text": "Compara se essas duas cartas levantadas são sequenciais (mesma imagem)"
+							"text": "Verifica se já temos duas cartas levantadas para poder comparar"
 						},
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "compare-two-values",
-									"objectClass": "System",
-									"sid": 894100526118765,
-									"parameters": {
-										"first-value": "gFirstCardFrame - (gFirstCardFrame % 2)",
-										"comparison": 0,
-										"second-value": "gSecondCardFrame - (gSecondCardFrame % 2)"
-									}
-								},
-								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 955996180386022,
+									"sid": 526035984530039,
 									"parameters": {
-										"variable": "gFirstCardFrame",
-										"comparison": 1,
-										"value": "gSecondCardFrame"
+										"variable": "gCardsCountPicked",
+										"comparison": 2,
+										"value": "2"
 									}
 								}
 							],
-							"actions": [],
-							"sid": 894326909378716,
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Card",
+									"sid": 490690152015265,
+									"parameters": {
+										"animation": "\"CardFace\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Card",
+									"sid": 488263695957266,
+									"parameters": {
+										"frame-number": "Card.CardFaceFrame"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Card",
+									"sid": 718545431978578,
+									"parameters": {
+										"instance-variable": "FaceUp",
+										"value": "true"
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 475835518691847,
+									"parameters": {
+										"variable": "gCardsCountPicked",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 138980767780616
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 870014141921891,
+									"parameters": {
+										"variable": "gCardsCountPicked",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 912673451291446,
+									"parameters": {
+										"variable": "gFirstCardFrame",
+										"value": "Card.CardFaceFrame"
+									}
+								}
+							],
+							"sid": 866519893384926
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 491564728991591,
+									"parameters": {
+										"variable": "gCardsCountPicked",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 245258189308657,
+									"parameters": {
+										"variable": "gSecondCardFrame",
+										"value": "Card.CardFaceFrame"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 528784143364792,
+									"parameters": {
+										"seconds": "gWaitSeconds",
+										"use-timescale": true
+									}
+								}
+							],
+							"sid": 722308027113482,
 							"children": [
 								{
 									"eventType": "comment",
-									"text": "Verifica se é o par impostor"
+									"text": "Compara se essas duas cartas levantadas são sequenciais (mesma imagem)"
 								},
 								{
 									"eventType": "block",
 									"conditions": [
 										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 371725688022567,
+											"parameters": {
+												"first-value": "gFirstCardFrame - (gFirstCardFrame % 2)",
+												"comparison": 0,
+												"second-value": "gSecondCardFrame - (gSecondCardFrame % 2)"
+											}
+										},
+										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 220049609958659,
+											"sid": 500469990474207,
 											"parameters": {
 												"variable": "gFirstCardFrame",
-												"comparison": 5,
-												"value": "10"
+												"comparison": 1,
+												"value": "gSecondCardFrame"
 											}
 										}
 									],
-									"actions": [
+									"actions": [],
+									"sid": 492564170812245,
+									"children": [
 										{
-											"callFunction": "EmbaralharCartas",
-											"sid": 503546107950538
+											"eventType": "comment",
+											"text": "Verifica se é o par impostor"
 										},
 										{
-											"id": "add-to-eventvar",
-											"objectClass": "System",
-											"sid": 270800597837559,
-											"parameters": {
-												"variable": "gNumberErrors",
-												"value": "1"
-											}
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 236414520084815,
+													"parameters": {
+														"variable": "gFirstCardFrame",
+														"comparison": 5,
+														"value": "10"
+													}
+												}
+											],
+											"actions": [
+												{
+													"callFunction": "EmbaralharCartas",
+													"sid": 665724563945738
+												},
+												{
+													"id": "add-to-eventvar",
+													"objectClass": "System",
+													"sid": 367620657672500,
+													"parameters": {
+														"variable": "gNumberErrors",
+														"value": "1"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 512886674298141,
+													"parameters": {
+														"variable": "gTime",
+														"value": "max(0, gTime - (gNumberErrors * gTimeDecrease))"
+													}
+												},
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 403607147095289,
+													"parameters": {
+														"object-to-create": "TextPenalty",
+														"layer": "0",
+														"x": "TextTimer.X - 150",
+														"y": "TextTimer.Y + 30",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "set-text",
+													"objectClass": "TextPenalty",
+													"sid": 192459590004674,
+													"parameters": {
+														"text": "\"-\"&(gTimeDecrease * gNumberErrors)&\"s\""
+													}
+												},
+												{
+													"id": "set-angle-of-motion",
+													"objectClass": "TextPenalty",
+													"sid": 304913869208991,
+													"behaviorType": "Bullet",
+													"parameters": {
+														"angle": "270"
+													}
+												}
+											],
+											"sid": 652328780966951,
+											"isOrBlock": true
 										},
 										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 291907578645212,
-											"parameters": {
-												"variable": "gTime",
-												"value": "max(0, gTime - (gNumberErrors * gTimeDecrease))"
-											}
+											"eventType": "comment",
+											"text": "Se não é o par impostor, é um par normal"
 										},
 										{
-											"id": "create-object",
-											"objectClass": "System",
-											"sid": 465259638380402,
-											"parameters": {
-												"object-to-create": "TextPenalty",
-												"layer": "0",
-												"x": "TextTimer.X - 150",
-												"y": "TextTimer.Y + 30",
-												"create-hierarchy": false,
-												"template-name": "\"\""
-											}
-										},
-										{
-											"id": "set-text",
-											"objectClass": "TextPenalty",
-											"sid": 866592092024542,
-											"parameters": {
-												"text": "\"-\"&(gTimeDecrease * gNumberErrors)&\"s\""
-											}
-										},
-										{
-											"id": "set-angle-of-motion",
-											"objectClass": "TextPenalty",
-											"sid": 689922479096338,
-											"behaviorType": "Bullet",
-											"parameters": {
-												"angle": "270"
-											}
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 100495306906512
+												},
+												{
+													"id": "pick-all",
+													"objectClass": "System",
+													"sid": 196414517754184,
+													"parameters": {
+														"object": "Card"
+													}
+												},
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "Card",
+													"sid": 436593662188552,
+													"parameters": {
+														"instance-variable": "EmJogo"
+													}
+												},
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "Card",
+													"sid": 263930141245173,
+													"parameters": {
+														"instance-variable": "FaceUp"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "destroy",
+													"objectClass": "Card",
+													"sid": 408980506342078
+												},
+												{
+													"id": "add-to-eventvar",
+													"objectClass": "System",
+													"sid": 403036680554817,
+													"parameters": {
+														"variable": "gMatches",
+														"value": "1"
+													}
+												}
+											],
+											"sid": 873176440437848
 										}
-									],
-									"sid": 857398464862513,
-									"isOrBlock": true
+									]
 								},
 								{
 									"eventType": "comment",
-									"text": "Se não é o par impostor, é um par normal"
+									"text": "Se não são iguais, volta as duas para baixo"
 								},
 								{
 									"eventType": "block",
@@ -994,12 +1066,12 @@
 										{
 											"id": "else",
 											"objectClass": "System",
-											"sid": 365038435210146
+											"sid": 486958146985319
 										},
 										{
 											"id": "pick-all",
 											"objectClass": "System",
-											"sid": 855123518703088,
+											"sid": 137377739482628,
 											"parameters": {
 												"object": "Card"
 											}
@@ -1007,15 +1079,7 @@
 										{
 											"id": "is-boolean-instance-variable-set",
 											"objectClass": "Card",
-											"sid": 246922934601952,
-											"parameters": {
-												"instance-variable": "EmJogo"
-											}
-										},
-										{
-											"id": "is-boolean-instance-variable-set",
-											"objectClass": "Card",
-											"sid": 843106623632179,
+											"sid": 730499532182785,
 											"parameters": {
 												"instance-variable": "FaceUp"
 											}
@@ -1023,116 +1087,70 @@
 									],
 									"actions": [
 										{
-											"id": "destroy",
+											"id": "set-boolean-instvar",
 											"objectClass": "Card",
-											"sid": 579961863744079
+											"sid": 409641124402383,
+											"parameters": {
+												"instance-variable": "FaceUp",
+												"value": "false"
+											}
 										},
 										{
-											"id": "add-to-eventvar",
-											"objectClass": "System",
-											"sid": 253564759280986,
+											"id": "set-animation",
+											"objectClass": "Card",
+											"sid": 661336313346693,
 											"parameters": {
-												"variable": "gMatches",
-												"value": "1"
+												"animation": "\"CardBack\"",
+												"from": "beginning"
 											}
 										}
 									],
-									"sid": 301319808429977
+									"sid": 505452359755360
+								},
+								{
+									"eventType": "comment",
+									"text": "Reinicializa as variáveis auxiliares"
+								},
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 183704375371301,
+											"parameters": {
+												"variable": "gCardsCountPicked",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 409071427411420,
+											"parameters": {
+												"variable": "gFirstCardFrame",
+												"value": "-1"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 341089464485371,
+											"parameters": {
+												"variable": "gSecondCardFrame",
+												"value": "-1"
+											}
+										}
+									],
+									"sid": 303772256145710
 								}
 							]
-						},
-						{
-							"eventType": "comment",
-							"text": "Se não são iguais, volta as duas para baixo"
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "else",
-									"objectClass": "System",
-									"sid": 200493704657585
-								},
-								{
-									"id": "pick-all",
-									"objectClass": "System",
-									"sid": 512619419405117,
-									"parameters": {
-										"object": "Card"
-									}
-								},
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Card",
-									"sid": 153183088571334,
-									"parameters": {
-										"instance-variable": "FaceUp"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-boolean-instvar",
-									"objectClass": "Card",
-									"sid": 856093745167419,
-									"parameters": {
-										"instance-variable": "FaceUp",
-										"value": "false"
-									}
-								},
-								{
-									"id": "set-animation",
-									"objectClass": "Card",
-									"sid": 976292749790423,
-									"parameters": {
-										"animation": "\"CardBack\"",
-										"from": "beginning"
-									}
-								}
-							],
-							"sid": 793063654268220
-						},
-						{
-							"eventType": "comment",
-							"text": "Reinicializa as variáveis auxiliares"
-						},
-						{
-							"eventType": "block",
-							"conditions": [],
-							"actions": [
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 571302471726154,
-									"parameters": {
-										"variable": "gCardsCountPicked",
-										"value": "0"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 822250980769321,
-									"parameters": {
-										"variable": "gFirstCardFrame",
-										"value": "-1"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 727469924834468,
-									"parameters": {
-										"variable": "gSecondCardFrame",
-										"value": "-1"
-									}
-								}
-							],
-							"sid": 453691465178630
 						}
 					]
 				}
-			]
+			],
+			"isOrBlock": true
 		},
 		{
 			"eventType": "comment",
@@ -1254,6 +1272,7 @@
 							"id": "play",
 							"objectClass": "Audio",
 							"sid": 993323993108188,
+							"disabled": true,
 							"parameters": {
 								"audio-file": "WinSound",
 								"loop": "not-looping",
@@ -1354,6 +1373,7 @@
 							"id": "play",
 							"objectClass": "Audio",
 							"sid": 371474515210983,
+							"disabled": true,
 							"parameters": {
 								"audio-file": "LoseSound",
 								"loop": "not-looping",
@@ -1422,6 +1442,14 @@
 						"click-type": "clicked",
 						"object-clicked": "BotaoVoltarNiveisInv"
 					}
+				},
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 473868797432319,
+					"parameters": {
+						"object": "BotaoVoltarNiveisInv"
+					}
 				}
 			],
 			"actions": [
@@ -1434,7 +1462,8 @@
 					}
 				}
 			],
-			"sid": 684947540241352
+			"sid": 684947540241352,
+			"isOrBlock": true
 		},
 		{
 			"eventType": "block",
@@ -1447,6 +1476,14 @@
 						"mouse-button": "left",
 						"click-type": "clicked",
 						"object-clicked": "BotaoManualPracaConceicao"
+					}
+				},
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 898935612756869,
+					"parameters": {
+						"object": "BotaoManualPracaConceicao"
 					}
 				}
 			],
@@ -1494,7 +1531,8 @@
 					}
 				}
 			],
-			"sid": 597511706598822
+			"sid": 597511706598822,
+			"isOrBlock": true
 		},
 		{
 			"eventType": "block",
@@ -1507,6 +1545,14 @@
 						"mouse-button": "left",
 						"click-type": "clicked",
 						"object-clicked": "BotaoFecharTutorial"
+					}
+				},
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 231810924901703,
+					"parameters": {
+						"object": "BotaoFecharTutorial"
 					}
 				}
 			],
@@ -1554,7 +1600,8 @@
 					}
 				}
 			],
-			"sid": 893230689695939
+			"sid": 893230689695939,
+			"isOrBlock": true
 		},
 		{
 			"eventType": "block",
@@ -1568,6 +1615,14 @@
 						"click-type": "clicked",
 						"object-clicked": "BotaoFecharPopUpVitoria"
 					}
+				},
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 690281280324488,
+					"parameters": {
+						"object": "BotaoFecharPopUpVitoria"
+					}
 				}
 			],
 			"actions": [
@@ -1580,7 +1635,8 @@
 					}
 				}
 			],
-			"sid": 820013589817600
+			"sid": 820013589817600,
+			"isOrBlock": true
 		},
 		{
 			"eventType": "block",
@@ -1594,6 +1650,14 @@
 						"click-type": "clicked",
 						"object-clicked": "BotaoProximaFase"
 					}
+				},
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 946495385257386,
+					"parameters": {
+						"object": "BotaoProximaFase"
+					}
 				}
 			],
 			"actions": [
@@ -1606,7 +1670,8 @@
 					}
 				}
 			],
-			"sid": 953172288353228
+			"sid": 953172288353228,
+			"isOrBlock": true
 		},
 		{
 			"eventType": "block",
@@ -1620,6 +1685,14 @@
 						"click-type": "clicked",
 						"object-clicked": "BotaoFecharPopUpDerrota"
 					}
+				},
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 349890560352114,
+					"parameters": {
+						"object": "BotaoFecharPopUpDerrota"
+					}
 				}
 			],
 			"actions": [
@@ -1632,7 +1705,8 @@
 					}
 				}
 			],
-			"sid": 992100561047592
+			"sid": 992100561047592,
+			"isOrBlock": true
 		},
 		{
 			"eventType": "block",
@@ -1646,6 +1720,14 @@
 						"click-type": "clicked",
 						"object-clicked": "BotaoTentarNovamente"
 					}
+				},
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 897570502002608,
+					"parameters": {
+						"object": "BotaoTentarNovamente"
+					}
 				}
 			],
 			"actions": [
@@ -1658,7 +1740,8 @@
 					}
 				}
 			],
-			"sid": 102341207311113
+			"sid": 102341207311113,
+			"isOrBlock": true
 		}
 	],
 	"sid": 981606670686406

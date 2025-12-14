@@ -59,6 +59,14 @@
 						"click-type": "clicked",
 						"object-clicked": "BotaoPracaConceicao"
 					}
+				},
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 723874342777126,
+					"parameters": {
+						"object": "BotaoPracaConceicao"
+					}
 				}
 			],
 			"actions": [
@@ -71,7 +79,8 @@
 					}
 				}
 			],
-			"sid": 914961240140599
+			"sid": 914961240140599,
+			"isOrBlock": true
 		},
 		{
 			"eventType": "block",
@@ -85,6 +94,14 @@
 						"click-type": "clicked",
 						"object-clicked": "BotaoVoltarNiveisInv"
 					}
+				},
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 899449257427287,
+					"parameters": {
+						"object": "BotaoVoltarNiveisInv"
+					}
 				}
 			],
 			"actions": [
@@ -97,7 +114,8 @@
 					}
 				}
 			],
-			"sid": 637802516898195
+			"sid": 637802516898195,
+			"isOrBlock": true
 		},
 		{
 			"eventType": "block",
@@ -110,6 +128,14 @@
 						"mouse-button": "left",
 						"click-type": "clicked",
 						"object-clicked": "BotaoAvisoFaseConstrucao"
+					}
+				},
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 568050790309126,
+					"parameters": {
+						"object": "BotaoAvisoFaseConstrucao"
 					}
 				}
 			],
@@ -140,7 +166,8 @@
 					}
 				}
 			],
-			"sid": 343062809911426
+			"sid": 343062809911426,
+			"isOrBlock": true
 		},
 		{
 			"eventType": "block",
@@ -153,6 +180,14 @@
 						"mouse-button": "left",
 						"click-type": "clicked",
 						"object-clicked": "BotaoFecharNivelConstrucao"
+					}
+				},
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 116332678885493,
+					"parameters": {
+						"object": "BotaoFecharNivelConstrucao"
 					}
 				}
 			],
@@ -183,7 +218,8 @@
 					}
 				}
 			],
-			"sid": 567540881238310
+			"sid": 567540881238310,
+			"isOrBlock": true
 		}
 	],
 	"sid": 314309259994371
